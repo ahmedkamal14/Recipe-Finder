@@ -78,7 +78,7 @@ const Login = () => {
       </div>
 
       {/* Image Section */}
-      <div className="img w-full lg:w-1/3 bg-[url('./login-back.png')] min-h-[300px] lg:min-h-screen bg-cover hidden lg:block"></div>
+      <div className="img w-full lg:w-1/3 bg-[url('/login-back.png')] min-h-[300px] lg:min-h-screen bg-cover hidden lg:block"></div>
     </div>
   );
 };

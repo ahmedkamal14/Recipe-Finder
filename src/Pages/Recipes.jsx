@@ -1,10 +1,14 @@
 import { FoodContext } from "../Context/FoodContext";
-import { useContext, useState } from "react";
+import { useContext, useState, useEffect } from "react";
 import RecipeCard from "../Components/RecipeCard";
 
 const Recipes = () => {
   const { displayedRecipes, searchQuery } = useContext(FoodContext);
   const [shown, setShown] = useState(15);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [displayedRecipes]);
 
   return (
     <div className="bg-white py-16">
@@ -18,7 +22,7 @@ const Recipes = () => {
               {displayedRecipes.slice(0, shown).map((recipe) => (
                 <RecipeCard key={recipe.id} recipe={recipe} />
               ))}
-            </div>  
+            </div>
             {shown < displayedRecipes.length && (
               <div className="flex justify-center">
                 <button

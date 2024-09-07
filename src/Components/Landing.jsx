@@ -11,7 +11,7 @@ const Landing = () => {
 
   const handleSearch = async (e) => {
     e.preventDefault();
-    setSearchQuery(value);  
+    setSearchQuery(value);
     const data = await searchRecipes(value);
     setDisplayedRecipes(data.recipes);
     console.log(data);
@@ -25,7 +25,7 @@ const Landing = () => {
   };
 
   return (
-    <div className="bg-[url('./landing.png')] min-h-[calc(100vh-72px)] bg-cover bg-no-repeat flex justify-center items-center">
+    <div className="bg-[url('/landing.png')] min-h-[calc(100vh-72px)] bg-cover bg-no-repeat flex justify-center items-center">
       <div className="search flex justify-center items-center bg-white/20 rounded-[40px] w-full max-w-[950px] mx-4">
         <input
           type="text"
